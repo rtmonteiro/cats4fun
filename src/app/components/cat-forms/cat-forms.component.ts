@@ -33,10 +33,10 @@ export class CatFormsComponent implements OnInit {
     // console.log(form);
     this.hideElement = !this.hideElement;
     if (this.hideElement) {
-      p.textContent = 'Menos Opções';
+      p.textContent = 'Less Options';
       btn.textContent = 'Specific Cat 🐈';
     } else {
-      p.textContent = 'Mais Opções';
+      p.textContent = 'More Options';
       btn.textContent = 'Random Cat ❔';
     }
   }
