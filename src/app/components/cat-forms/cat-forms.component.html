@@ -1,0 +1,39 @@
+<form #form="ngForm">
+  <div class="options" #options [style.display]="hideElement?'inherit':'none'">
+    <div class="form-group">
+      <label for="breed">Breed:</label>
+      <select name="breed" id="breed" [(ngModel)]="cat.breed">
+        <option
+          *ngFor="let breed of breeds"
+          [ngValue]="breed.id"
+          [attr.selected]="cat.breed==breed.name ? true : null">
+          {{breed.name}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="categories">Category: </label>
+      <select name="categories" id="categories" [(ngModel)]="cat.categorie">
+        <option
+          *ngFor="let categorie of categories"
+          [ngValue]="categorie.id"
+          [attr.selected]="cat.categorie==categorie.name ? true : null"
+        >
+          {{ categorie.name | titlecase }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+
+  <button (click)="getCat(cat.breed, cat.categorie)">Random Cat ❔</button>
+</form>
+
+<p (click)='toggleOptions()' [className]="hideElement ? 'onOptions' : ''">More Options</p>
+
+<figure>
+  <img alt="gatinho">
+</figure>
+
+<!-- <h3>{{ cat | json }}</h3> -->
