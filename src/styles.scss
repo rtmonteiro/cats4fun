@@ -11,6 +11,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background:
+    url('./assets/Artboard\ 1.svg')
+    center center / 75px
+    round;
   background-color: #96e8f7;
 }
 
@@ -30,18 +34,17 @@ button {
               color 250ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+  &:hover {
+    background: #F966A8;
+    color: #fff;
+  }
+  &:focus {
+    background: #F966A8;
+    color: #fff;
+    box-shadow: 0px 0px 4px 1px grey;
+  }
+  &:active {
+    transform: scale(0.99);
+  }
 }
 
-button:hover,
-button:focus {
-  background: #F966A8;
-  color: #fff;
-}
-
-button:focus {
-  box-shadow: 0px 0px 4px 1px grey;
-}
-
-button:active {
-  transform: scale(0.99);
-}
