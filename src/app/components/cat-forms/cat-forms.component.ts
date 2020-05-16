@@ -26,11 +26,10 @@ export class CatFormsComponent implements OnInit {
   breeds: IBreed[] = CatBreeds;
 
   toggleOptions() {
-    const options = document.querySelector('.options');
-    const p = document.querySelector('p');
-    const btn = document.querySelector('button');
+    const       p = document.querySelector('#optionsText');
+    const     btn = document.querySelector('#getCatButton');
 
-    // console.log(form);
+    // console.log(arrow);
     this.hideElement = !this.hideElement;
     if (this.hideElement) {
       p.textContent = 'Less Options';
